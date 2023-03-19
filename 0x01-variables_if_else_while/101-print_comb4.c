@@ -12,6 +12,7 @@ int main(void)
 {
 	int digit1 = 0, digit2, digit3;
 	bool check1, check2;
+
 	while (digit1 <= 9)
 	{
 		digit2 = 0;
