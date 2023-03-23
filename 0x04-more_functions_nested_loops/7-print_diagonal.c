@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - print \ nmbers n
- * @n: number of _ more than 0
+ * @n: number of \ more than 0
  */
 
 void print_diagonal(int n)
