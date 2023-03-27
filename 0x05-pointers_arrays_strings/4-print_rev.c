@@ -5,9 +5,10 @@
  */
 void print_rev(char *s)
 {
-	int str_len = _strlen(*s);
+	int str_len, i;
 	char str[] = *s;
 
+	str_len = _strlen(s);
 	for (i = str_len; i >= 0; i--)
 		_putchar(str[i]);
 	}
