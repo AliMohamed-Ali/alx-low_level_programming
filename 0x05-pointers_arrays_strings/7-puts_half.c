@@ -10,7 +10,7 @@ void puts_half(char *s)
 	while (s[i])
 		i++;
 	i++;
-	for (i / 2; s[i] != '\0'; i++)
+	for (i /= 2; s[i] != '\0'; i++)
 		_putchar(s[i]);
 	_putchar('\n');
 }
