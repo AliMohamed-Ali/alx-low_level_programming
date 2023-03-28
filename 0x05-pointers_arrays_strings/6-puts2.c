@@ -5,6 +5,7 @@
  */
 void puts2(char *str)
 {
+	int i = 0;
 	while (1)
 	{
 		if (*str == '\0')
@@ -12,8 +13,9 @@ void puts2(char *str)
 			_putchar('\n');
 			break;
 		}
-		if (*str % 2 == 0)
+		if (i % 2 == 0)
 			_putchar(*str);
 		str++;
+		i++;
 	}
 }
