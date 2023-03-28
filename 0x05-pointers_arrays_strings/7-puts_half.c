@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * puts_half - print half of string
- * @str: sting
+ * @s: sting
  */
-void puts_half(char *str)
+void puts_half(char *s)
 {
 	int i = 0, j;
 
