@@ -17,7 +17,7 @@ int is_lower(char c)
 int isDelimiter(char c)
 {
 	int i;
-	char del[] = " \n\t,;.!?\"{}";
+	char del[] = " \n\t,.!?\"(){}";
 
 	for (i = 0; i < 12; i++)
 	{
@@ -35,19 +35,20 @@ int isDelimiter(char c)
 char *cap_string(char *s)
 {
 	int foundDil = 1;
+	char *ptr = s;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		if (isDelimiter(s[i]))
+		if (isDelimiter(*s))
 			foundDil = 1;
-		else if (is_lower(s[i]) && foundDil)
+		else if (is_lower(*s) && foundDil)
 		{
-			s[i] -= 32;
+			*s -= 32;
 			foundDil = 0;
 		}
 		else
 			foundDil = 0;
-
+		s++;
 	}
-	return (s);
+	return (ptr);
 }
