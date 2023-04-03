@@ -14,6 +14,6 @@ s1 += a[itr];
 s2 += a[size - itr - 1];
 a += size;
 }
-prinf("%d, ", s1);
-prinf("%d, ", s2);
+printf("%d, ", s1);
+printf("%d, ", s2);
 }
