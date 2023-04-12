@@ -1,0 +1,21 @@
+#include <stdio.h>
+/**
+ * main - prints the multiple argument
+ * @argc: int
+ * @argv: list
+ * Return: int
+*/
+int main(int argc, char *argv[])
+{
+	if (argc == 3)
+	{
+		printf("%d\n", argv[1] * argv[2]);
+		return (0);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+
+	}
+}
