@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stlib.h>
+#include <stdlib.h>
 /**
  * main - prints the sum argument
  * @argc: int
@@ -8,18 +8,20 @@
 */
 int main(int argc, char *argv[])
 {
-	int res;
+int sum = 0;
+char *c;
 
-	if (argc == 3)
-	{
-		res = atoi(argv[1]) + atoi(argv[2]);
-		printf("%d\n", res);
-		return (0);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-
-	}
+while(argc--)
+{
+for (c = argv[argc]; *c; c++)
+{
+if (*c < '0' || *c > '9')
+{
+return (printf("Error\n"), 1);
+}
+sum += atoi(argv[argc]);
+}
+}
+printf("%d\n", sum);
+return (0);
 }
