@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stlib.h>
 /**
  * main - prints the multiple argument
  * @argc: int
@@ -7,9 +8,12 @@
 */
 int main(int argc, char *argv[])
 {
+	int res;
+
 	if (argc == 3)
 	{
-		printf("%d\n", argv[1] * argv[2]);
+		res = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", res);
 		return (0);
 	}
 	else
