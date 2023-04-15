@@ -31,7 +31,7 @@ if (ac == 0 || av == 0)
 {
 return (NULL);
 }
-for (; i < ac; i++; nc++)
+for (; i < ac; i++, nc++)
 {
 nc += _strlen(av[i]);
 }
@@ -42,7 +42,7 @@ return (NULL);
 }
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j] != '\0'; j++; cmpt++)
+for (j = 0; av[i][j] != '\0'; j++, cmpt++)
 {
 s[cmpt] = av[i][j]
 }
