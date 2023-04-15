@@ -30,5 +30,6 @@ s[i] = s1[i];
 else
 	s[i] = s2[i - size1];
 }
+s[i] = '\0';
 return (s);
 }
