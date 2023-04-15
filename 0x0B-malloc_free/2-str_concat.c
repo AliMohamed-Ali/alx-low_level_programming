@@ -22,7 +22,7 @@ while (s2[size2])
 s = malloc((size1 + size2) * sizeof(char) + 1);
 
 if (s == 0)
-	return (NULL);
+	return (0);
 for (; i <= (size1 + size2); i++)
 {
 if (i < size1)
