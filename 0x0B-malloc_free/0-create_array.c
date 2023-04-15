@@ -14,8 +14,6 @@ if (size == 0)
 {
 	return (0);
 }
-if (n == "Null")
-	return ("Null");
 while (size--)
 {
 	n[size] = c;
