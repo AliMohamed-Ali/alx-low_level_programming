@@ -42,7 +42,7 @@ switch ((int)(!str))
 	case 1:
 		str = "(nil)";
 }
-	printf("%s%s", separator, va_arg(app, str));
+	printf("%s%s", separator, str);
 }
 /**
  * print_all - that prints all format, followed by a new line.
