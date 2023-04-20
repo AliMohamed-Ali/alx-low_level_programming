@@ -21,7 +21,7 @@ return;
 va_start(arg, n);
 while (i--)
 {
-printf("%s%s", (str = va_arg(arg, char)) ? str : "(nil)",
+printf("%s%s", (str = va_arg(arg, char *)) ? str : "(nil)",
 i ? (separator ? separator : "") : "\n");
 }
 va_end(arg);
