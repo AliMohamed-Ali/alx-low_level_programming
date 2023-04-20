@@ -8,7 +8,7 @@
  */
 void format_char(char *separator, va_list app)
 {
-printf("%s%c", separator, va_arg(app, int));
+	printf("%s%c", separator, va_arg(app, int));
 }
 /**
  * format_int - that prints strings, followed by a new line.
@@ -17,7 +17,7 @@ printf("%s%c", separator, va_arg(app, int));
  */
 void format_int(char *separator, va_list app)
 {
-printf("%s%d", separator, va_arg(app, int));
+	printf("%s%d", separator, va_arg(app, int));
 }
 /**
  * format_float - that prints strings, followed by a new line.
@@ -26,7 +26,7 @@ printf("%s%d", separator, va_arg(app, int));
  */
 void format_float(char *separator, va_list app)
 {
-printf("%s%f", separator, va_arg(app, double));
+	printf("%s%f", separator, va_arg(app, double));
 }
 /**
  * format_string - that prints strings, followed by a new line.
@@ -39,11 +39,15 @@ char *str = va_arg(app, char *);
 
 switch ((int)(!str))
 {
-case 1:
-str = "(nil)";
+	case 1:
+		str = "(nil)";
 }
-printf("%s%s", separator, va_arg(app, str));
+	printf("%s%s", separator, va_arg(app, str));
 }
+/**
+ * print_all - that prints all format, followed by a new line.
+ * @format: format pointer
+ */
 void print_all(const char * const format, ...)
 {
 int i = 0, j;
@@ -60,17 +64,17 @@ token_t tokens[] = {
 va_start(app, format);
 while (format && format[i])
 {
-j = 0;
-while (tokens[j].token)
-{
-if (format[i] == tokens[j].token[0])
-{
-tokens[j].f(separator, app);
-separator = ", ";
-}
-j++;
-}
-i++;
+	j = 0;
+	while (tokens[j].token)
+	{
+		if (format[i] == tokens[j].token[0])
+		{
+			tokens[j].f(separator, app);
+			separator = ", ";
+		}
+		j++;
+	}
+	i++;
 
 }
 printf("\n");
